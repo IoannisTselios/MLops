@@ -1,0 +1,7 @@
+name: exp1
+epochs: 10
+lr: 0.001
+batch_size: 64
+data_path: 'data/processed'
+data_bucket_name: 'dtu-mlops-data-bucket'
+model_bucket_name: 'dog-breed-identification-model'

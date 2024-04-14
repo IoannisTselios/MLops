@@ -1,0 +1,64 @@
+Metadata-Version: 2.1
+Name: dog_breed_identification
+Version: 0.0.1
+Summary: Identify dogs based on images
+Author-email: Team 37 <your@email.com>
+License: 
+        The MIT License (MIT)
+        Copyright (c) 2024, Team 37
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+        
+Requires-Python: >=3.11
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: click==8.1.7
+Requires-Dist: fastapi==0.109.0
+Requires-Dist: hydra-core==1.3.2
+Requires-Dist: pandas==2.1.4
+Requires-Dist: protobuf==4.25.2
+Requires-Dist: pytest==7.4.4
+Requires-Dist: scikit_learn==1.3.2
+Requires-Dist: timm==0.9.12
+Requires-Dist: torch==2.1.2
+Requires-Dist: torchvision==0.16.2
+Requires-Dist: wandb==0.16.2
+Requires-Dist: google-cloud-storage
+Provides-Extra: dev
+Requires-Dist: pre-commit>=3.5.0; extra == "dev"
+Requires-Dist: pytest>=7.4.3; extra == "dev"
+Requires-Dist: ruff>=0.1.3; extra == "dev"
+Requires-Dist: mkdocs<=1.5.3; extra == "dev"
+Requires-Dist: mkdocs-material<=9.4.6; extra == "dev"
+Requires-Dist: mkdocstrings<=0.23.0; extra == "dev"
+Requires-Dist: mkdocstrings[python]>=0.18; extra == "dev"
+
+# Dog Breed Identification
+
+![Dog](https://media.discordapp.net/attachments/791010369010794526/1193157948747296768/IMG_0513.jpg?ex=65abb1ee&is=65993cee&hm=7dc556eccff4a7421dc074a8f6e1b1e29218c189a54e79ab298286cb62981e05&=&format=webp&width=507&height=676)
+
+## Overall goal of the project
+The goal of the project is to set up a controlled, organized, scalable, reproducible and deployable machine learning project with various tools taught in the [Machine Learning Operations (02476)](https://skaftenicki.github.io/dtu_mlops/) course. The actual problem that this project is aimed at solving with deep learning is identifying dog breeds based on images with the help of a pre-trained model from [Pytorch Image Models](https://github.com/huggingface/pytorch-image-models). 
+
+## What framework are you going to use and you do you intend to include the framework into your project?
+We are going to use a pre-trained model from [Pytorch Image Models](https://github.com/huggingface/pytorch-image-models).
+
+## What data are you going to run on (initially, may change)?
+The dataset we are going to further train the model comes from Kaggle competition [Dog Breed Identification](https://www.kaggle.com/competitions/dog-breed-identification/overview). It contains a total of 10 222 training images and 10 357 test images of 120 different types of breeds. We may change the size of these original sets based on how our experiments go.
+
+## What models do you expect to use?
+We take a pre-trained model from [Pytorch Image Models](https://github.com/huggingface/pytorch-image-models) called [Mobilenet V3](https://pprp.github.io/timm/models/mobilenet-v3/) and we are going to further train it on our dataset. 
+
+# API
+
+The endpoint to make predictions with our latest model is available here:
+
+```
+https://dog-breed-identification-api-k3daan6qya-ew.a.run.app/predict
+```
+
+The endpoint expects a POST request with an `imagefiles` attribute containing the images to predict. 

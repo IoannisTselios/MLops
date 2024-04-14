@@ -1,0 +1,39 @@
+outs:
+- hash: md5
+  path: processed
+  files:
+  - relpath: .gitkeep
+    md5: d41d8cd98f00b204e9800998ecf8427e
+    size: 0
+    cloud:
+      remote_storage:
+        etag: 08cbccf08da8d583031001
+        version_id: '1704975344084555'
+  - relpath: breeds.csv
+    md5: 8b93f562f33d6f93024262c5db05c8fb
+    size: 2081
+    cloud:
+      remote_storage:
+        etag: 08b285e28da8d583031001
+        version_id: '1704975343846066'
+  - relpath: test.pt
+    md5: 674363514a75c6bdbe201b45ac9df2cf
+    size: 1242841101
+    cloud:
+      remote_storage:
+        etag: 08afa88cd6a8d583031001
+        version_id: '1704975495533615'
+  - relpath: train.pt
+    md5: 1348f9f2847bf17db154a2f82249b413
+    size: 982222604
+    cloud:
+      remote_storage:
+        etag: 0888d3a2cea8d583031001
+        version_id: '1704975479122312'
+  - relpath: val.pt
+    md5: db224b6acf43efe0e90341bfab6ec169
+    size: 245646784
+    cloud:
+      remote_storage:
+        etag: 08a886b8a4a8d583031001
+        version_id: '1704975391392552'

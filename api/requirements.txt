@@ -1,0 +1,10 @@
+fastapi==0.108.0
+pandas==2.1.4
+protobuf==3.20.3
+timm==0.9.12
+torch==2.1.2
+torchvision==0.16.2
+google-cloud-storage==2.14.0
+Pillow==10.2.0
+transformers==4.36.2
+evidently==0.4.14

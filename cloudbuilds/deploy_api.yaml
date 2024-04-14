@@ -1,0 +1,17 @@
+steps:
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['build', '-t', 'gcr.io/dtu-mlops-project-410911/dog-breed-identification-api:latest', 'api/'] 
+
+- name: 'gcr.io/cloud-builders/docker'
+  args: ['push', 'gcr.io/dtu-mlops-project-410911/dog-breed-identification-api:latest']
+
+- name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+  entrypoint: gcloud
+  args:
+  - 'run'
+  - 'deploy'
+  - 'dog-breed-identification-api'
+  - '--image'
+  - 'gcr.io/dtu-mlops-project-410911/dog-breed-identification-api:latest'
+  - '--region'
+  - 'europe-west1'
